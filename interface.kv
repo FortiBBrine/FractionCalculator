@@ -1,0 +1,94 @@
+Screen:
+	BoxLayout:
+		orientation: 'vertical'
+		BoxLayout:
+			size_hint: 1, .7
+			padding: 150
+			spacing: 50
+			# 1 дріб
+			TextInput:
+				id: fraction11
+
+				input_filter: "int"
+				multiline: False
+				font_size: 90
+			BoxLayout:
+				orientation: 'vertical'
+				spacing: 50
+				TextInput:
+					id: fraction12
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+				TextInput:
+					id: fraction13
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+			Button:
+				id: sign
+
+				background_color: 0, 0, .5, .8
+				font_name: "fonts/Montserrat-ExtraBold"
+				text: "+"
+				font_size: 90
+				on_press: app.change_sign(self)
+			# 2 дріб
+			TextInput:
+				id: fraction21
+
+				input_filter: "int"
+				multiline: False
+				font_size: 90
+			BoxLayout:
+				orientation: 'vertical'
+				spacing: 50
+				TextInput:
+					id: fraction22
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+				TextInput:
+					id: fraction23
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+			Label:
+				text: "="
+				font_size: 90
+			# 3 дріб
+			TextInput:
+				id: fraction31
+
+				input_filter: "int"
+				multiline: False
+				font_size: 90
+			BoxLayout:
+				orientation: 'vertical'
+				spacing: 50
+				TextInput:
+					id: fraction32
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+				TextInput:
+					id: fraction33
+
+					input_filter: "int"
+					multiline: False
+					font_size: 90
+
+		BoxLayout:
+			size_hint: 1, .3
+			padding: 750, 50
+			Button:
+				text: "Обчислити"
+				font_size: 90
+				font_name: "fonts/Montserrat-ExtraBold"
+				background_color: 0, 0, .5, .8
+				on_press: app.solve(self)

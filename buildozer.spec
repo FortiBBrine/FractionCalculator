@@ -29,7 +29,7 @@ source.include_exts = py,png,jpg,kv,atlas,ttf
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 1.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -284,7 +284,7 @@ android.allow_backup = True
 # android.no-compile-pyo = True
 
 # (str) The format used to package the app for release mode (aab or apk or aar).
-# android.release_artifact = aab
+android.release_artifact = apk
 
 # (str) The format used to package the app for debug mode (apk or aar).
 # android.debug_artifact = apk

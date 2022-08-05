@@ -26,7 +26,7 @@ class MyApp(App):
 
     def solve(self, instance):
 
-        ids = instance.parent.parent.parent.ids
+        ids = instance.parent.parent.parent.parent.ids
 
         # Перший дріб
         fraction11 = ids["fraction11"]
@@ -80,7 +80,9 @@ class MyApp(App):
         if sign == "+": result = fraction1 + fraction2
         elif sign == "-": result = fraction1 - fraction2
         elif sign == "*": result = fraction1 * fraction2
-        elif sign == ":": result = fraction1 / fraction2
+        elif sign == ":": 
+            if fraction2 == 0: result = Fraction(1, 1) 
+            else: result = fraction1 / fraction2
 
         minus = str(result).startswith("-")
 
@@ -105,6 +107,16 @@ class MyApp(App):
         fraction31.text = str(integer)
         fraction32.text = str(numerator)
         fraction33.text = str(denominator)
+
+    def to_info(self, instance):
+
+        screen_manager = instance.parent.parent.parent.parent
+        screen_manager.current = "info"
+
+    def to_main(self, instance):
+
+        screen_manager = instance.parent.parent.parent.parent
+        screen_manager.current = "main"
 
 if __name__ == "__main__":
     MyApp().run()
